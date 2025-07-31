@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/AdminLogin.css"; // create your own styles
+import "../styles/adminLogin.css"; // create your own styles
 import { div } from "framer-motion/client";
 
 const AdminLogin = ({ onLoginSuccess }) => {
