@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Contact from "./Pages/Contact/Contact";
 import Customize from "./Pages/Customize/Customize";
-import Gallery from "./Pages/Gallery/gallery";
+import Gallery from "./Pages/Gallery/Gallery";
 import AdminLogin from "./Pages/Admin/pages/AdminLogin";
 import AdminDashboard from "./Pages/Admin/pages/AdminDashboard";
 import TourList from "./Pages/Admin/components/TourList";
