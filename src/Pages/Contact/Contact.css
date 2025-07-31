@@ -1,0 +1,455 @@
+.contactus-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 20px;
+    background-color: var(--mint-cream);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.contactus-form-section {
+    background-color: var(--mint-cream);
+    color: var(--pomp-and-power);
+    padding: 80px 20px;
+}
+
+/* Wrapper for the main content to ensure it's above the shapes */
+.contactus-content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main heading style */
+.contactus-main-heading {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--pomp-and-power);
+    margin: 0 0 24px 0;
+}
+
+/* Wrapper for the changing word and cursor */
+.contactus-dynamic-word-wrapper {
+    display: inline-block;
+    position: relative;
+    height: 1.2em;
+}
+
+/* Gradient style for the dynamic text */
+.contactus-gradient-text {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--pomp-and-power), var(--french-gray));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Blinking cursor style */
+.contactus-cursor {
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    background-color: var(--pomp-and-power);
+    margin-left: 10px;
+    animation: blink 1s infinite;
+    vertical-align: bottom;
+}
+
+/* Description text style */
+.contactus-description {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--pomp-and-power);
+    opacity: 0.9;
+}
+
+/* "Get in Touch" button style */
+.contactus-cta-button {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--mint-cream);
+    background: var(--pomp-and-power);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contactus-cta-button:hover {
+    transform: translateY(-3px);
+    background: var(--french-gray);
+    color: var(--pomp-and-power);
+    box-shadow: 0 10px 25px rgba(141, 106, 159, 0.2);
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- BACKGROUND SHAPES --- */
+.contactus-shape-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contactus-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    will-change: transform;
+    animation: contactusFloat 15s ease-in-out infinite alternate;
+}
+
+.contactus-shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    background: rgba(141, 106, 159, 0.2);
+    /* Pomp and Power */
+    animation-duration: 15s;
+}
+
+.contactus-shape-2 {
+    width: 250px;
+    height: 250px;
+    top: 60%;
+    right: 15%;
+    background: rgba(197, 203, 211, 0.3);
+    /* French Gray */
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.contactus-shape-3 {
+    width: 200px;
+    height: 200px;
+    bottom: 5%;
+    left: 30%;
+    background: rgba(141, 106, 159, 0.25);
+    /* Pomp and Power */
+    animation-duration: 18s;
+}
+
+.contactus-shape-4 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    right: 40%;
+    background: rgba(197, 203, 211, 0.2);
+    /* French Gray */
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.contactus-shape-5 {
+    width: 350px;
+    height: 350px;
+    bottom: 20%;
+    left: 5%;
+    background: rgba(141, 106, 159, 0.15);
+    /* Pomp and Power */
+    animation-duration: 20s;
+}
+
+@keyframes contactusFloat {
+    from {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-30px) translateX(20px) rotate(20deg);
+    }
+}
+
+/* --- FORM SECTION --- */
+.contactus-form-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contactus-form-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--pomp-and-power);
+}
+
+.contactus-form-header p {
+    font-size: 1.125rem;
+    color: var(--pomp-and-power);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contactus-form-layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactus-left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contactus-form-container {
+    background: var(--french-gray);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--pomp-and-power);
+}
+
+.contactus-form .contactus-form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.contactus-form .contactus-form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contactus-form .contactus-form-row+.contactus-form-group {
+    margin-bottom: 24px;
+}
+
+.contactus-form-group label {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--pomp-and-power);
+}
+
+.contactus-form-group input,
+.contactus-form-group textarea {
+    background-color: var(--mint-cream);
+    border: 1px solid var(--pomp-and-power);
+    color: var(--pomp-and-power);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contactus-form-group input:focus,
+.contactus-form-group textarea:focus {
+    outline: none;
+    border-color: var(--pomp-and-power);
+    box-shadow: 0 0 0 2px rgba(141, 106, 159, 0.3);
+}
+
+.contactus-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contactus-send-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--pomp-and-power);
+    color: var(--mint-cream);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactus-send-button:hover {
+    background-color: #7b5a8b;
+    /* Darker Pomp and Power */
+}
+
+/* --- QUICK RESPONSE CARD --- */
+.contactus-quick-response-card {
+    background: var(--french-gray);
+    text-align: center;
+    margin-top: 50px;
+    padding: 36px;
+    border-radius: 12px;
+    border: 1px solid var(--pomp-and-power);
+}
+
+.contactus-quick-response-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: var(--pomp-and-power);
+}
+
+.contactus-quick-response-card p {
+    color: var(--pomp-and-power);
+    opacity: 0.9;
+    max-width: 300px;
+    margin: 0 auto 24px auto;
+    line-height: 1.6;
+}
+
+.contactus-quick-response-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--pomp-and-power);
+    font-weight: 500;
+}
+
+/* --- CONTACT INFO (RIGHT COLUMN) --- */
+.contactus-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contactus-info-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--pomp-and-power);
+}
+
+.contactus-info-card {
+    background: var(--french-gray);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--pomp-and-power);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contactus-info-icon {
+    color: var(--mint-cream);
+    background-color: var(--pomp-and-power);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contactus-info-text h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: var(--pomp-and-power);
+}
+
+.contactus-info-text p {
+    color: var(--pomp-and-power);
+    opacity: 0.9;
+    margin: 0 0 8px 0;
+    font-size: 0.875rem;
+}
+
+.contactus-info-text a,
+.contactus-info-text span {
+    color: var(--pomp-and-power);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.contactus-info-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 992px) {
+    .contactus-form-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactus-main-heading {
+        font-size: 3.5rem;
+    }
+
+    .contactus-description {
+        font-size: 1rem;
+    }
+
+    .contactus-form-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contactus-main-heading {
+        font-size: 2.5rem;
+    }
+
+    .contactus-cta-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+
+    .contactus-form-layout {
+        gap: 24px;
+    }
+
+    .contactus-form-container {
+        padding: 24px;
+    }
+
+    .contactus-form .contactus-form-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+}

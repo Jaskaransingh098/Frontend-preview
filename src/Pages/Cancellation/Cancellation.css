@@ -1,0 +1,648 @@
+/* --- Hero Section Container --- */
+.cancellation-payment-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    /* padding: 4rem 1rem; */
+    padding-top: 50px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-image:
+        radial-gradient(at 80% 10%, hsla(210, 90%, 90%, 1) 0px, transparent 60%),
+        radial-gradient(at 10% 90%, hsla(340, 90%, 92%, 1) 0px, transparent 60%),
+        radial-gradient(at 50% 50%, hsla(190, 90%, 90%, 1) 0px, transparent 55%);
+    background-size: 60% 50%;
+    animation: why-travel-gradient-animation 10s ease-in-out infinite;
+}
+
+.cancellation-payment-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Top Tag --- */
+.cancellation-payment-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: black;
+}
+
+/* --- Typography --- */
+.cancellation-payment-title {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.cancellation-payment-title span {
+    background: -webkit-linear-gradient(45deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cancellation-payment-ampersand {
+    font-family: serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.cancellation-payment-subtitle {
+    max-width: 600px;
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* --- Bottom Info --- */
+.cancellation-payment-bottom-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cancellation-payment-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancellation-payment-button:hover {
+    background-color: #c62828;
+}
+
+.cancellation-payment-effective-date {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .cancellation-payment-hero-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .cancellation-payment-title {
+        font-size: clamp(2.2rem, 12vw, 3rem);
+    }
+
+    .cancellation-payment-subtitle {
+        font-size: 1rem;
+    }
+
+    .cancellation-payment-bottom-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.cancellation-payment-bottom-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cancellation-payment-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancellation-payment-button:hover {
+    background-color: #c62828;
+}
+
+.cancellation-payment-effective-date {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Cancellation Policy Content Section --- */
+.cancellation-payment-content-section {
+    padding: 4rem 1rem;
+    background-color: #fff;
+}
+
+.cancellation-payment-policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.cancellation-payment-section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cancellation-payment-section-header svg {
+    color: #4a5568;
+}
+
+.cancellation-payment-section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+}
+
+.cancellation-payment-section-header p {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Policy Boxes --- */
+.cancellation-payment-min-fee-box,
+.cancellation-payment-lockdown-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.cancellation-payment-min-fee-box {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.cancellation-payment-lockdown-box {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.cancellation-payment-min-fee-box h4,
+.cancellation-payment-lockdown-box h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cancellation-payment-min-fee-box p,
+.cancellation-payment-lockdown-box p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- Charges Grid --- */
+.cancellation-payment-charges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.cancellation-payment-charge-card {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cancellation-payment-charge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+}
+
+.cancellation-payment-charge-card.card-green::before {
+    background-color: #34d399;
+}
+
+.cancellation-payment-charge-card.card-yellow::before {
+    background-color: #fbbf24;
+}
+
+.cancellation-payment-charge-card.card-orange::before {
+    background-color: #fb923c;
+}
+
+.cancellation-payment-charge-card.card-red::before {
+    background-color: #f87171;
+}
+
+.cancellation-payment-charge-card h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: #1a202c;
+}
+
+.cancellation-payment-charge-card p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+
+    .cancellation-payment-content-section {
+        padding: 2rem 1rem;
+    }
+}
+
+.cancellation-payment-content-section {
+    padding: 4rem 1rem;
+    background-color: #fff;
+}
+
+.cancellation-payment-policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cancellation-payment-section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cancellation-payment-section-header svg {
+    color: #4a5568;
+}
+
+.cancellation-payment-section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+}
+
+.cancellation-payment-section-header p {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Policy Boxes --- */
+.cancellation-payment-min-fee-box,
+.cancellation-payment-lockdown-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.cancellation-payment-min-fee-box {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.cancellation-payment-lockdown-box {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.cancellation-payment-min-fee-box h4,
+.cancellation-payment-lockdown-box h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cancellation-payment-min-fee-box p,
+.cancellation-payment-lockdown-box p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- Charges Grid --- */
+.cancellation-payment-charges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.cancellation-payment-charge-card {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cancellation-payment-charge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+}
+
+.cancellation-payment-charge-card.card-green::before {
+    background-color: #34d399;
+}
+
+.cancellation-payment-charge-card.card-yellow::before {
+    background-color: #fbbf24;
+}
+
+.cancellation-payment-charge-card.card-orange::before {
+    background-color: #fb923c;
+}
+
+.cancellation-payment-charge-card.card-red::before {
+    background-color: #f87171;
+}
+
+.cancellation-payment-charge-card h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: #1a202c;
+}
+
+.cancellation-payment-charge-card p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.payment-policy-section {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-policy-container {
+    max-width: 900px;
+    width: 100%;
+}
+.payment-policy-container p{
+    font-size: 2rem;
+    margin-left: 49%;
+    margin-bottom: 10px;
+}
+
+/* --- Section Header --- */
+.payment-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.payment-section-header .payment-policy-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #3b82f6;
+    /* A nice blue color */
+    margin: 0 auto 0.5rem;
+}
+
+.payment-section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    /* Dark grey for text */
+    margin: 0;
+}
+
+.payment-section-header p {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+    color: #6b7280;
+    /* Lighter grey for subtitle */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Instalment Grid --- */
+.instalment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns on desktop */
+    gap: 1.5rem;
+}
+
+/* --- Instalment Card --- */
+.instalment-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    /* Light border */
+    border-radius: 1rem;
+    /* Rounded corners */
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.instalment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.instalment-icon {
+    flex-shrink: 0;
+    color: #3b82f6;
+    width: 2rem;
+    height: 2rem;
+}
+
+.instalment-details {
+    flex-grow: 1;
+}
+
+.instalment-details h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.instalment-details p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.instalment-percentage {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #eff6ff;
+    /* Light blue background */
+    color: #2563eb;
+    /* Darker blue text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #dbeafe;
+}
+
+.cancellation-cta-section {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 7%;
+    padding: 5rem 1rem;
+    background: linear-gradient(90deg, #60a5fa, #ef4444);
+    border-radius: 1.5rem;
+    /* margin: 2rem; */
+}
+
+.cancellation-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.cancellation-cta-container h2 {
+    font-size: 2.5rem;
+    /* font-weight: 800; */
+    margin: 0 0 1rem 0;
+}
+
+.cancellation-cta-container p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    /* max-width: 600px; */
+    margin: 0 auto 2.5rem auto;
+    opacity: 0.9;
+}
+
+.cancellation-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cancellation-cta-button-primary,
+.cancellation-cta-button-secondary {
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancellation-cta-button-primary {
+    background-color: #fff;
+    color: #3b82f6;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cancellation-cta-button-primary:hover {
+    transform: translateY(-2px);
+    background-color: #f0f0f0;
+}
+
+.cancellation-cta-button-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.cancellation-cta-button-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .payment-policy-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .instalment-grid {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+
+    .payment-section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .payment-section-header p {
+        font-size: 1rem;
+    }
+
+    .cancellation-cta-section {
+        padding: 3rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .cancellation-cta-container h2 {
+        font-size: 2rem;
+    }
+}

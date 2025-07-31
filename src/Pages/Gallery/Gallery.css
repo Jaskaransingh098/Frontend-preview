@@ -1,0 +1,417 @@
+.ourgallery-hero-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13%;
+    justify-content: space-between;
+    /* Pushes content and featured works apart */
+    align-items: center;
+    min-height: 100vh auto;
+    padding: 200px 20px;
+    /* background: radial-gradient(ellipse at top, #2c2150, #0c0a18); */
+    background: linear-gradient(to top, #111827, #0f1826, #6686b0);
+    /* background-color: #0c0a18; */
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ourgallery-customize-bg-shape {
+    position: absolute;
+    border-radius: 9999px;
+    /* Creates the pill shape */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+    z-index: 0;
+    animation: floatAnimation 10s infinite ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Individual shape styles */
+.gallery-shape-1 {
+    width: 320px;
+    height: 80px;
+    top: 25%;
+    left: 10%;
+    transform: rotate(-30deg);
+    animation-delay: 0s;
+    background: linear-gradient(135deg, rgba(70, 78, 12, 0.5), rgba(59, 246, 72, 0.3));
+    animation-name: floatAnimationReverse;
+}
+
+.gallery-shape-2 {
+    width: 400px;
+    height: 100px;
+    top: 45%;
+    right: 35%;
+    transform: rotate(20deg);
+    animation-name: floatAnimationReverse;
+    /* animation-delay: 8s; */
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(168, 85, 247, 0.3));
+}
+
+.gallery-shape-3 {
+    width: 180px;
+    height: 70px;
+    bottom: 30%;
+    left: 1%;
+    transform: rotate(65deg);
+    /* animation-delay: 10s; */
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.5), rgba(34, 197, 94, 0.3))
+}
+
+.gallery-shape-4 {
+    width: 250px;
+    height: 90px;
+    bottom: 10%;
+    right: 15%;
+    transform: rotate(-35deg);
+    /* animation-delay: 2s; */
+    animation-name: floatAnimationReverse;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.5), rgba(239, 68, 68, 0.3));
+}
+
+.gallery-shape-5 {
+    width: 150px;
+    height: 60px;
+    top: 15%;
+    right: 40%;
+    transform: rotate(-45deg);
+    /* animation-delay: 5s; */
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.5), rgba(234, 179, 8, 0.3));
+}
+
+.gallery-shape-6 {
+    width: 480px;
+    height: 70px;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(65deg);
+    /* animation-delay: 6s; */
+    background: linear-gradient(135deg, rgba(217, 70, 239, 0.5), rgba(217, 70, 239, 0.3));
+}
+
+.gallery-shape-7 {
+    width: 250px;
+    height: 90px;
+    bottom: 40%;
+    right: 1%;
+    transform: rotate(-35deg);
+    /* animation-delay: 10s; */
+    animation-name: floatAnimationReverse;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.5), rgba(20, 184, 166, 0.3));
+}
+
+/* Keyframes for the shape floating animation */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(calc(var(--initial-rotate, 0deg) + 15deg));
+    }
+
+    100% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+}
+
+@keyframes floatAnimationReverse {
+    0% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+
+    50% {
+        transform: translateY(25px) rotate(calc(var(--initial-rotate, 0deg) - 15deg));
+    }
+
+    100% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+}
+
+/* Wrapper for the main content to center it */
+.ourgallery-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+
+/* Main heading "Visual Stories" */
+.ourgallery-main-heading {
+    font-size: 6rem;
+    /* 96px */
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 24px 0;
+    letter-spacing: -2px;
+}
+
+/* Gradient effect for the word "Stories" */
+.ourgallery-gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #a855f7, #e6acc9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Paragraph description styles */
+.ourgallery-description {
+    max-width: 560px;
+    margin: 0 auto 40px auto;
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.6;
+    color: #d1d5db;
+    /* A light gray for readability */
+}
+
+/* Container for the action buttons */
+.ourgallery-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Base styles for both buttons */
+.ourgallery-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    /* 16px */
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+/* Primary button ("Explore Gallery") styles */
+.ourgallery-button-primary {
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    color: #ffffff;
+}
+
+.ourgallery-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25);
+}
+
+/* Secondary button ("Learn More") styles */
+.ourgallery-button-secondary {
+    background-color: rgba(30, 27, 47, 0.8);
+    color: #ffffff;
+    border-color: #4a5568;
+}
+
+.ourgallery-button-secondary:hover {
+    background-color: #2d3748;
+    border-color: #718096;
+}
+
+.ourgallery-gallery-intro {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* "Featured Works" link at the bottom */
+.ourgallery-featured-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #f1f3f6;
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.ourgallery-featured-works:hover {
+    color: #000000;
+}
+
+.ourgallery-featured-arrow {
+    animation: bounce 2s infinite;
+}
+
+/* Container for the filter tags */
+.ourgallery-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Individual tag styles */
+.ourgallery-tag {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #dce0e7;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #6b7280;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ourgallery-tag:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: #374151;
+}
+
+/* Active tag styles */
+.ourgallery-tag-active {
+    background-color: #1f2937;
+    color: #ffffff;
+    border-color: white;
+}
+
+
+/* Simple bounce animation for the arrow */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.ourgallery-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    /* This helps fill in gaps */
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ourgallery-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.ourgallery-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.ourgallery-grid-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+/* Grid item sizing */
+.ourgallery-grid-item-medium {
+    grid-column: span 2;
+}
+
+.ourgallery-grid-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Overlay for text on hover */
+.ourgallery-grid-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #ffffff;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.ourgallery-grid-item:hover .ourgallery-grid-item-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .ourgallery-main-heading {
+        font-size: 4rem;
+    }
+
+    .ourgallery-description {
+        font-size: 1rem;
+    }
+
+    .ourgallery-grid-item-medium,
+    .ourgallery-grid-item-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .ourgallery-main-heading {
+        font-size: 3rem;
+    }
+
+    .ourgallery-button-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .ourgallery-button {
+        width: 100%;
+    }
+
+    .ourgallery-tags-container {
+        gap: 8px;
+    }
+
+    .ourgallery-tag {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .ourgallery-image-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+}

@@ -1,0 +1,488 @@
+.customize-hero-scroll-demo-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(to top, #111827, #1f2937, #4b5563);
+
+}
+
+.customize-bg-shape {
+    position: absolute;
+    border-radius: 9999px;
+    /* Creates the pill shape */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+    z-index: 0;
+    animation: floatAnimation 10s infinite ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Individual shape styles */
+.shape-1 {
+    width: 320px;
+    height: 80px;
+    top: 25%;
+    left: 10%;
+    transform: rotate(-30deg);
+    /* animation-delay: 0s; */
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0));
+    animation-name: floatAnimationReverse;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 100px;
+    top: 37%;
+    right: 5%;
+    transform: rotate(20deg);
+    /* animation-delay: 10s; */
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0));
+}
+
+.shape-3 {
+    width: 180px;
+    height: 70px;
+    bottom: 30%;
+    left: 1%;
+    transform: rotate(65deg);
+    /* animation-delay: 5s; */
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0))
+}
+
+.shape-4 {
+    width: 250px;
+    height: 90px;
+    bottom: 10%;
+    right: 15%;
+    transform: rotate(-35deg);
+    /* animation-delay: 7s; */
+    animation-name: floatAnimationReverse;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0));
+}
+
+.shape-5 {
+    width: 150px;
+    height: 60px;
+    top: 15%;
+    right: 40%;
+    transform: rotate(-45deg);
+    /* animation-delay: 4s; */
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0));
+}
+
+.shape-6 {
+    width: 480px;
+    height: 70px;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(65deg);
+    /* animation-delay: 6s; */
+    background: linear-gradient(135deg, rgba(217, 70, 239, 0.1), rgba(217, 70, 239, 0));
+}
+
+.shape-7 {
+    width: 250px;
+    height: 90px;
+    bottom: 40%;
+    right: 1%;
+    transform: rotate(-35deg);
+    /* animation-delay: 2s; */
+    animation-name: floatAnimationReverse;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(20, 184, 166, 0));
+}
+
+/* Keyframes for the shape floating animation */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(calc(var(--initial-rotate, 0deg) + 15deg));
+    }
+
+    100% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+}
+
+@keyframes floatAnimationReverse {
+    0% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+
+    50% {
+        transform: translateY(25px) rotate(calc(var(--initial-rotate, 0deg) - 15deg));
+    }
+
+    100% {
+        transform: translateY(0px) rotate(var(--initial-rotate, 0deg));
+    }
+}
+
+.customize-hero-scroll-demo-container::before,
+.customize-hero-scroll-demo-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+
+    filter: blur(60px);
+
+    /* animation: customizefloatAnimation 25s infinite ease-in-out; */
+}
+
+
+.customize-hero-scroll-demo-container::before {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(75, 85, 99, 0.25);
+
+    left: 10%;
+    top: 15%;
+    animation-delay: 0s;
+}
+
+/* Right shape */
+.customize-hero-scroll-demo-container::after {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(31, 41, 55, 0.25);
+    /* Darker muted gray-blue */
+    right: 10%;
+    bottom: 20%;
+    animation-delay: -12s;
+    /* Starts animation at a different point */
+}
+
+/* --- New keyframes for the shapes (replaces old gradient animation) --- */
+@keyframes customizefloatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-40px) rotate(10deg) scale(1.05);
+    }
+}
+
+.customize-container-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60rem;
+    padding: 0.5rem;
+    z-index: 1;
+    /* --- New: Ensures this is on top of the shapes --- */
+}
+
+@media (min-width: 768px) {
+    .customize-container-scroll-wrapper {
+        height: 80rem;
+        padding: 2rem;
+    }
+}
+
+.customize-container-scroll-content {
+    position: relative;
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    perspective: 1000px;
+}
+
+@media (min-width: 768px) {
+    .customize-container-scroll-content {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+/* === Header Styles === */
+.customize-header-content {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.customize-hero-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.dark .customize-hero-title {
+    color: #ffffff;
+}
+
+.customize-hero-title-span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .customize-hero-title-span {
+        font-size: 6rem;
+    }
+}
+
+/* === Card Styles === */
+.customize-card-container {
+    max-width: 64rem;
+    margin-left: 16%;
+    margin-right: auto;
+    margin-top: -3rem;
+    height: 30rem;
+    width: 100%;
+    border: 4px solid #6c6c6c;
+    padding: 0.5rem;
+    /* background-color: #222222; */
+    border-radius: 30px;
+    box-shadow: 0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;
+}
+
+@media (min-width: 768px) {
+    .customize-card-container {
+        height: 40rem;
+        padding: 1.5rem;
+    }
+}
+
+.customize-card-content {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #2f3542, #475569, #64748b);
+}
+
+.dark .customize-card-content {
+    background-color: #18181b;
+}
+
+@media (min-width: 768px) {
+    .customize-card-content {
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* === Image Styles === */
+.customize-hero-image {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    height: 100%;
+    object-position: left top;
+}
+
+
+.customize-form-container {
+    color: #111827;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark .customize-form-container {
+    color: white;
+}
+
+.customize-form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.customize-form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.customize-form-subtitle {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.dark .customize-form-subtitle {
+    color: #9ca3af;
+}
+
+.customize-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.customize-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .customize-form-row {
+        flex-direction: row;
+    }
+}
+
+.customize-form-input,
+.customize-form-textarea {
+    width: 100%;
+    height: 45px;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #4b5563;
+    /* slate border for depth */
+    background: linear-gradient(135deg, #1e293b, #374151);
+    color: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.dark .customize-form-input,
+.dark .customize-form-textarea {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+
+.customize-form-input::placeholder,
+.customize-form-textarea::placeholder {
+    color: #dddfe2;
+}
+
+.dark .customize-form-input::placeholder,
+.dark .customize-form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.customize-form-input:focus,
+.customize-form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+.customize-form-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.customize-form-input-date {
+    padding-right: 2.5rem;
+    /* Make space for the icon label */
+}
+
+.customize-date-icon-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 100%;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dark .customize-date-icon-label {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.customize-form-input-date::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    height: 45px;
+    padding: 0.75rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    /* border: 1px solid #d1d5db; */
+    box-sizing: border-box;
+}
+
+.dark-calendar {
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+}
+
+/* Header */
+.dark-calendar .react-datepicker__header {
+    background-color: #111827;
+    border-bottom: 1px solid #374151;
+}
+
+/* Days */
+.dark-calendar .react-datepicker__day {
+    color: #ffffff;
+}
+
+/* Selected day */
+.dark-calendar .react-datepicker__day--selected,
+.dark-calendar .react-datepicker__day--keyboard-selected {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+/* Hovered day */
+.dark-calendar .react-datepicker__day:hover {
+    background-color: #374151;
+}
+
+/* Month and navigation */
+.dark-calendar .react-datepicker__current-month,
+.dark-calendar .react-datepicker__navigation-icon {
+    color: white;
+}
+
+.customize-form-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #10b981;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.customize-form-button:hover {
+    background-color: #059669;
+}
+
+.customize-form-input[type="number"]::-webkit-outer-spin-button,
+.customize-form-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.customize-form-input[type="number"] {
+    -moz-appearance: textfield;
+}
