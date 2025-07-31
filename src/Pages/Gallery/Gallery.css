@@ -8,9 +8,9 @@
     min-height: 100vh auto;
     padding: 200px 20px;
     /* background: radial-gradient(ellipse at top, #2c2150, #0c0a18); */
-    background: linear-gradient(to top, #111827, #0f1826, #6686b0);
+    /* background: linear-gradient(to top, #111827, #0f1826, #6686b0); */
     /* background-color: #0c0a18; */
-    color: #ffffff;
+    color: #1f2937;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     overflow: hidden;
@@ -167,7 +167,7 @@
     font-size: 1.125rem;
     /* 18px */
     line-height: 1.6;
-    color: #d1d5db;
+    color: #2d3748;
     /* A light gray for readability */
 }
 
@@ -236,7 +236,7 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: #f1f3f6;
+    color: #1f2937;
     font-size: 0.875rem;
     /* 14px */
     font-weight: 500;
@@ -268,7 +268,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     color: #dce0e7;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: var(--pomp-and-power);
     border: 1px solid #6b7280;
     border-radius: 9999px;
     cursor: pointer;
@@ -276,7 +276,8 @@
 }
 
 .ourgallery-tag:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(198, 180, 180, 0.4);
+    color: black;
     border-color: #374151;
 }
 
